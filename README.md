@@ -12,7 +12,7 @@ I'll try to update this repo every wednesday with a new example.
 
 Want to contribute?  Shoot me a pull request and I'd be happy to include it, but make sure you follow the formatting and style guidelines of the first lesson as closely as your comfortable with. 
 
-Example #1:[What the heck is a view frustum?!](https://github.com/landongn/three.js-tutorials/blob/master/1/index.html)
+Example #1:[What the heck is a view frustum?!](https://github.com/landongn/three.js-tutorials/tree/master/1/index.html)
 
 
 

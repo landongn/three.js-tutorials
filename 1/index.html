@@ -87,19 +87,34 @@
 
 					wat
 
-					Okay, so you probably don't know exactly what a frustum is.  That's cool. It's a pretty useful component of working in 3d.
+					Okay, so you probably don't know exactly what a frustum is.  That's cool. 
+					It's a pretty useful component of working in 3d.
 
-					The view frustum is the region of 3d space in your scene that "exists on" the screen. Read that last bit again just to be safe. It's your renderers eyeballs. 
+					The view frustum is the region of 3d space in your scene that "exists on" the screen. 
+					Read that last bit again just to be safe. It's your renderers eyeballs. 
 
-					Things that exist within the space the frustum is "looking" at, get rendered. (in a perfect world, of course).
+					Things that exist within the space the frustum is "looking" at, get rendered. 
+					(in a perfect world, of course).
 
-					Essentially, the term describes the 3d space of your scene that you can "see", through the position of your camera and what the camera is "looking" at.
+					Essentially, the term describes the 3d space of your scene that you can "see"
+					through the position of your camera and what the camera is "looking" at.
 
 					The "viewing frustum" is a three dimensional pyramid, with a larger flat base(far, or the z depth maximum) and a small flat tip(near, or the z depth minimum).  
 					You attach your renderers eyeballs at the "near" plane, and the distance to where you can't see anymore. (the far plane).
 
-					The next time it's a cloudy day outside, take a look up at the sky. You and I have about about 90 degrees of vision.
-					Within that 90 degrees, we can see just about as far as the nearest cloud above us, and all of the clouds within our peripheral vision.  This is essentially the view frustum in the real world.  We have a near plane (your eyes), and a far plane (the clouds).  The edges of your peripheral vision form your field of view from your near plane to your far plane, however far away that may be.  Keep in mind, though-  You can see more of the world farther away, and less of the world up close.
+					The next time it's a cloudy day outside, take a look up at the sky. 
+
+					You and I have about about 90 degrees of vision.
+					
+					Within that 90 degrees, we can see just about as far as the nearest cloud above us, and all of the clouds within our peripheral vision.  
+
+					This is essentially the view frustum in the real world.  
+
+					We have a near plane (your eyes), and a far plane (the clouds).  
+
+					The edges of your peripheral vision form your field of view from your near plane to your far plane, however far away that may be.  
+
+					Keep in mind, though-  You can see more of the world farther away, and less of the world up close.
 
 					Commit this to memory. It should be second nature for you to think this way when you are working in 3d.
 				*/
