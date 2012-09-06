@@ -3,12 +3,7 @@
 <head>
 <script src="http://raw.github.com/mrdoob/three.js/master/build/three.js"></script>
 <style type="text/css">
-
-#HelloWorld{
-	width:800px;
-	height:600px;
-	background:black;
-}
+#HelloWorld{ width:800px; height:600px; background:black; }
 </style>
 </head>
 
@@ -24,14 +19,12 @@
 		//#####################
 		// Three.js Basics
 		// @landongn
-		// 
 		//#####################
 		
 		var _renderer = {
 			//#####################
 			// Renderer prototype. Edit in your renderer logic into these functions and 
-			// properties.  When instantiated, the app will call the init(); function.
-			// 
+			// properties.  When instantiated, the object will call the init(); function.
 			//#####################
 			
 			name: "HelloWorld", //# of the DOM element to attach
@@ -41,16 +34,25 @@
 			renderer: null,
 
 
+			//#####################
+			// init() is called immediately when the object is created via new Foo();
+			//#####################
 			init: function(){
 				this.container = document.getElementById(this.name);
 				this.createScene();
 			},
 
+			//#####################
+			// make updates to the world in this method. 
+			//#####################
 			render: function(){
 				this.renderer.render(this.scene, this.camera);
 				this.draw();
 			},
 
+			//#####################
+			// actually draws the updated frame once rAF fires.
+			//#####################
 			draw: function(){
 				window.requestAnimationFrame(this.render.bind(this));
 			},
@@ -59,7 +61,6 @@
 				//#####################
 				// set up the rendering context, along with some basic three.js
 				// elements, such as a Scene, Renderer, and Camera.
-				// 
 				//#####################
 				
 				this.renderer = new THREE.WebGLRenderer(); 
@@ -68,20 +69,17 @@
 				//#####################
 				// Done! Now to configure the renderer..
 				//#####################
-
 				this.renderer.setSize(this.container.offsetWidth, this.container.offsetHeight);
 				
 				//#####################
 				// Once options are set, append it to the DOM within the container
 				//#####################
-
 				this.container.appendChild(this.renderer.domElement);
 
 				//#####################
 				// Renderer? Check. 
 				// Scene?  	 Check.
 				// Camera?	 o wai
-				// cameras have the following inputs at creation: 
 				// THREE.PerspectiveCamera( Field of View, Aspect Ratio, Near frustum plane, Far frustum plane );
 				/*	
 
@@ -91,23 +89,24 @@
 
 					Okay, so you probably don't know exactly what a frustum is.  That's cool. It's a pretty useful component of working in 3d.
 
-					The view frustum is the region of 3d space in your scene that "exists on" the screen. It's your renderers eyeballs. 
+					The view frustum is the region of 3d space in your scene that "exists on" the screen. Read that last bit again just to be safe. It's your renderers eyeballs. 
 
 					Things that exist within the space the frustum is "looking" at, get rendered. (in a perfect world, of course).
 
 					Essentially, the term describes the 3d space of your scene that you can "see", through the position of your camera and what the camera is "looking" at.
 
-					The "viewing frustum" is a three dimensional pyramid, with a larger flat base(far, or the z depth maximum) and a small flat tip(near, or the z depth minimum).  You attach your renderers eyeballs at the "near" plane, and the distance to where you can't see anymore. (the far plane).
+					The "viewing frustum" is a three dimensional pyramid, with a larger flat base(far, or the z depth maximum) and a small flat tip(near, or the z depth minimum).  
+					You attach your renderers eyeballs at the "near" plane, and the distance to where you can't see anymore. (the far plane).
 
 					The next time it's a cloudy day outside, take a look up at the sky. You and I have about about 90 degrees of vision.
-					Within that 90 degrees, we can see just about as far as the nearest cloud above us, and all of the clouds within our peripheral vision.  This is essentially the view frustum in the real world.  We have a near plane (your eyes), and a far plane (the clouds).  The edges of your peripheral vision form your field of view from your near plane to your far plane, however far away that may be.
+					Within that 90 degrees, we can see just about as far as the nearest cloud above us, and all of the clouds within our peripheral vision.  This is essentially the view frustum in the real world.  We have a near plane (your eyes), and a far plane (the clouds).  The edges of your peripheral vision form your field of view from your near plane to your far plane, however far away that may be.  Keep in mind, though-  You can see more of the world farther away, and less of the world up close.
 
-					Commit this to memory. It should be second nature for you to think this way when you are working in 3d.  This is as close to the viewport of an iPhone's browser, javascript's prototype, or C++'s compiler that you can get to levels of importance in the 3d world.
+					Commit this to memory. It should be second nature for you to think this way when you are working in 3d.
 				*/
 				//#####################
 
 				
-				this.camera = new THREE.PerspectiveCamera( 45, this.container.offsetHeight / this.container.offsetWidth, 1, 4000 );
+				this.camera = new THREE.PerspectiveCamera( 90, this.container.offsetHeight / this.container.offsetWidth, 1/*near plane*/, 1000/*far plane*/ );
 
 				//set the camera's position within the scene.
 				this.camera.position.set(0, 0, 3.3333);
