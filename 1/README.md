@@ -15,7 +15,7 @@ I say "Rendering" and not "3d graphics" because it's really all about rendering.
 
 Enter: The Pyramid of Doom. 
 
-![The Pyramid of Doom](https://github.com/landongn/three.js-tutorials/tree/master/1/frustum.png?)
+![The Pyramid of Doom](https://raw.github.com/landongn/three.js-tutorials/master/1/frustum.png)
 
 Everything that exists within the /volume/ of the frustum is what you actually see when you see "3d" graphics.  It's the lynchpin on the whole operation.  Three Dimensional Space doesn't exist without it. 
 
