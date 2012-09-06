@@ -11,9 +11,7 @@ This seems pretty basic, and you'd figure that it would be easily looked up with
 
 What broke through that cobweb infested brain of mine is when I learned what the heck a View Frustum was, and why it was important in 3d rendering. 
 
-I say "Rendering" and not "Graphics" in general because it's really all about _rendering_.  You're taking a scene, adding geometry, materials, lighting, shaders, and then finally rendering it.  But to what?  What is getting rendered, and where is it getting rendered? How do I know direction? What about particle effects! Sweet tits, think about all of the fucking matrix transformation wat is happening i am not good with compu
-
-**ahem**
+I say "Rendering" and not "Graphics" in general because it's really all about _rendering_.  You're taking a scene, adding geometry, materials, lighting, shaders, and then finally rendering it.  But to what?  What is getting rendered, and where is it getting rendered? How do I know direction?
 
 Enter: The Pyramid of Eyeballs. 
 
